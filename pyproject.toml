@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "biglab"
+version = "0.1.0"
+description = "biglab 홈페이지"
+authors = ["creepereye <iostream1204@gmail.com>"]
+license = "biglab"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+
+
+[tool.poetry.group.dev.dependencies]
+pre-commit = "^3.7.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

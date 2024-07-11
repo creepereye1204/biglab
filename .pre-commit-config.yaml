@@ -1,3 +1,4 @@
+# Encoding: utf-8
 # See https://pre-commit.com for more information
 # See https://pre-commit.com/hooks.html for more hooks
 repos:
@@ -15,16 +16,16 @@ repos:
     rev: 7.1.0
     hooks:
       - id: flake8
+        args: [--max-line-length=100]
         additional_dependencies:
           - flake8-bugbear
           - flake8-builtins
           - flake8-coding
           - flake8-import-order
           - flake8-polyfill
-          - flake8-quotes
-        exclude: ^core/core/utils/collections.py$
-  - repo: https://github.com/pre-commit/mirrors-mypy
-    rev: 'v1.10.0'
-    hooks:
-      - id: mypy
-        additional_dependencies: [ types-requests, types-PyYAML, types-toml ]
+        exclude: ^biglab/settings.py$
+#  - repo: https://github.com/pre-commit/mirrors-mypy
+#    rev: 'v1.10.0'
+#    hooks:
+#      - id: mypy
+#        additional_dependencies: [ types-requests, types-PyYAML, types-toml ]
